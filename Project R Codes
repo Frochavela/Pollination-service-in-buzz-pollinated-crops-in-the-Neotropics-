@@ -1,0 +1,68 @@
+Projec:  Pollination service provided by honey bees to buzz-pollinated crops in the Neotropics  
+
+####### Fig. 5.A. Violin plots of number of fruits produced in eggplant
+  data.frame(FruitSet_Eggplant)
+  data = data.frame(FruitSet_Eggplant)
+  data
+  library("vioplot")
+  vioplot (data$Number.of.fruit.per.plant[data$TREATMENTS == "EXC"],
+           data$Number.of.fruit.per.plant[data$TREATMENTS == "OPEN"],
+           data$Number.of.fruit.per.plant[data$TREATMENTS == "PLUS"],
+           data$Number.of.fruit.per.plant[data$TREATMENTS == "NBZ"],
+           data$Number.of.fruit.per.plant[data$TREATMENTS == "AHB1"],
+           data$Number.of.fruit.per.plant[data$TREATMENTS == "AHB2"],
+           data$Number.of.fruit.per.plant[data$TREATMENTS == "AHB3"],
+           names = c("EXC", "OPEN", "PLUS", "NB", "AHB1", "AHB2", "AHB3"),
+           col = 7, xlab = "TREATMENTS", ylab = "Number of fruit per plant",
+           ylim=c(-1,4))
+
+####### Fig. 5.B. Violin plots of number of fruits produced in annatto
+  data.frame(FruitSet_Annatto)
+  data = data.frame(FruitSet_Annatto)
+  data
+  library("vioplot")
+  vioplot (data$Number.of.fruit.per.plant[data$TREATMENTS == "EXC"],
+               data$Number.of.fruit.per.plant[data$TREATMENTS == "OPEN"],
+               data$Number.of.fruit.per.plant[data$TREATMENTS == "PLUS"],
+               data$Number.of.fruit.per.plant[data$TREATMENTS == "NB"],
+               data$Number.of.fruit.per.plant[data$TREATMENTS == "AHB1"],
+               data$Number.of.fruit.per.plant[data$TREATMENTS == "AHB2"],
+               data$Number.of.fruit.per.plant[data$TREATMENTS == "AHB3"],
+               data$Number.of.fruit.per.plant[data$TREATMENTS == "AHB4"],
+               names = c("EXC", "OPEN", "PLUS", "NB", "AHB1", "AHB2", "AHB3", "AHB4"),
+             col = 7, xlab = "TREATMENTS", ylab = "Number of fruit per plant",
+               ylim=c(-1,4))
+
+####### Fig. 6.A. Violin plots comparing the weight of eggplant fruit 
+  
+  data.frame(FruitW_Eggplant)
+  data = data.frame(FruitW_Eggplant)
+  data
+  library("vioplot")
+  vioplot (horizontal = TRUE, data$FruitWeight[data$TREATMENTS == "AHB3"],
+           data$FruitWeight[data$TREATMENTS == "AHB2"],
+           data$FruitWeight[data$TREATMENTS == "AHB1"],
+           data$FruitWeight[data$TREATMENTS == "NBZ"],
+           data$FruitWeight[data$TREATMENTS == "PLUS"],
+           data$FruitWeight[data$TREATMENTS == "OPEN"],
+           data$FruitWeight[data$TREATMENTS == "EXC"],
+           names = c("AHB3", "AHB2", "AHB1", "NBZ", "PLUS", "OPEN", "EXC"),
+           col = 7, xlab = "Fruit Weight", ylab = "TREATMENTS", las = 1,
+           ylim=c(200,500))
+  
+####### Fig. 6.B. Violin plots comparing the seed number of annatto fruit 
+  data.frame(SeedN_Annatto)
+  data = data.frame(SeedN_Annatto)
+  data
+  library("vioplot")
+  vioplot (horizontal = TRUE, data$Seed.number[data$TREATMENTS == "AHB4"],
+           data$Seed.number[data$TREATMENTS == "AHB3"],
+           data$Seed.number[data$TREATMENTS == "AHB2"],
+           data$Seed.number[data$TREATMENTS == "AHB1"],
+           data$Seed.number[data$TREATMENTS == "NB"],
+           data$Seed.number[data$TREATMENTS == "PLUS"],
+           data$Seed.number[data$TREATMENTS == "OPEN"],
+           data$Seed.number[data$TREATMENTS == "EXC"],
+           names = c("AHB4", "AHB3", "AHB2", "AHB1", "NB", "PLUS", "OPEN", "EXC"),
+           col = 7, xlab = "Seed number", ylab = "TREATMENTS", las = 1, 
+           ylim = c(0, 50))
